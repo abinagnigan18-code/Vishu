@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Vishu</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  color: white;
+}
+
+/* Page 1 Background */
+.page1 {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToiPTuL8sjgRe-sIn0CGwpD_MU3HFRuKp0XBjvqwvSAQ&s=10") no-repeat center/cover;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+/* Page 2 Background */
+.page2 {
+  background: linear-gradient(to right, #ffcc00, #ff6600);
+  min-height: 12vh;
+  display: none;
+  padding: 10px;
+}
+
+/* Overlay */
+.overlay {
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+}
+
+/* Heading Animation */
+h1 {
+  font-size: 60px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px yellow; }
+  to { text-shadow: 0 0 30px orange; }
+}
+
+/* Image Animation */
+.main-img {
+  width: 300px;
+  border-radius: 20px;
+  margin-top: 20px;
+  animation: zoom 3s infinite alternate;
+}
+
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+/* Button */
+button {
+  margin-top: 40px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background: gold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: orange;
+}
+
+/* Center Image Page 2 */
+.center-img {
+  width: 350px;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Avatar Grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.container img {
+  width: 100%;
+  height: 150px;        /* Same height for all */
+  object-fit: cover;    /* Crop cheyth neat aakkum */
+  border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page1" id="page1">
+  <div class="overlay">
+    <h1>🌼 Happy Vishu 🌼</h1>
+
+    <img class="main-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkjkYV2B0U-jF00Krg2hTCqoPOwADd6N-3POKFi9SlqPH36MAf4fr5-8Q&s=10">
+
+    <br>
+
+    <button onclick="showPage2()">More Vishu Special</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page2" id="page2">
+
+  <h1>✨ Vishu Special ✨</h1>
+
+  <img class="center-img" src="https://dont2qcigdrmt.cloudfront.net/ProductImages/Articles/Vishnu_Dashavatar_(Ten_Incarnations_of_Vishnu)-main1.jpg">
+
+  <h2>Dashavatara of Mahavishnu</h2>
+
+  <div class="container">
+    <img src="https://i.pinimg.com/736x/33/38/9a/33389ace24f318aaba8046c1844f84cf.jpg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1yv1yff7gmddjywP4MDj9IRXN1A2cdUl65kIMRmeLVQ6sbKDTymirr85m&s=10">
+    <img src="https://www.bollywoodhungama.com/wp-content/uploads/2025/07/Mahavatar-Narsimha-promo-unveils-Varaha-avatars-epic-rise-800.jpg">
+    <img src="https://t3.ftcdn.net/jpg/15/59/07/62/360_F_1559076292_qfB15BIwE2CNq7asEJtw8EUE481NgNtB.jpg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxHvpfrz69fFZfoQ1WNollg0nUURtp01cCZGQ3cX0U9IYlQXQgiUqmG8A&s=10">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGp2yLIhEdGer75TL4DaAJHrVV8OnZUW0H2acp31meMV3SXwwr5hrRJjw&s">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5aisbTOw7SdgdylauJjf6P27EnsTZI1TPK0tsAgBG1r94q-bNyx7CHH-b&s=10">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrOe6z1yHSQTe09USNJAN3PchTjqnAWFEor47faAwaGg&s=10">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUqxc76G9pQJU-eLivnBu9ap8TRTKHOY6uewmnEyzZDMm9ZWJQPWkAMg4i&s=10">
+    <img src="https://d3ehumack2xlu4.cloudfront.net/uploads/posts/1744947838.jpg">
+  </div>
+
+  <button onclick="goBack()">⬅ Back</button>
+
+</div>
+
+<script>
+function showPage2() {
+  document.getElementById("page1").style.display = "none";
+  document.getElementById("page2").style.display = "block";
+}
+
+function goBack() {
+  document.getElementById("page1").style.display = "block";
+  document.getElementById("page2").style.display = "none";
+}
+</script>
+
+</body>
+</html>
